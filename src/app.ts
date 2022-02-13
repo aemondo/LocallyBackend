@@ -1,9 +1,13 @@
 import express from "express";
+import data from "../data/limadmin.json";
+
 const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  console.log("hello est-ce que tu vois ");
+
+  res.send({ data });
 });
 
 app.listen(port, () => {
