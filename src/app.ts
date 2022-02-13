@@ -1,8 +1,9 @@
 import express from "express";
-import data from "../data/limadmin.json";
+import fs from "fs";
 
 const app = express();
 const port = 3000;
+let data = fs.readFileSync("./data/limadmin.json");
 
 app.get("/", (req, res) => {
   console.log("hello est-ce que tu vois ");
